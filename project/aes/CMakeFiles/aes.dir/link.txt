@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libaes.so -o /mnt/hgfs/clionworkspace/crypto-for-cpp/libs/libaes.so CMakeFiles/aes.dir/mnt/hgfs/clionworkspace/crypto-for-cpp/src/aes.c.o 

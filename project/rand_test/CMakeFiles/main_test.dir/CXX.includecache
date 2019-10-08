@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/aes.h
+
+../../include/base64.h
+
+../../include/debug.h
+log.h
+../../include/log.h
+
+../../include/log.h
+stdarg.h
+-
+stdio.h
+-
+
+../../include/rand.h
+
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/main_test.cpp
+stdlib.h
+-
+string.h
+-
+time.h
+-
+unistd.h
+-
+string
+-
+debug.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/debug.h
+rand.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/rand.h
+aes.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/aes.h
+base64.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/base64.h
+

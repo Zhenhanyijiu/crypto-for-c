@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/base64.h
+
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/base64.cpp
+base64.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/base64.h
+stdio.h
+-
+string.h
+-
+cassert
+-
+iostream
+-
+map
+-
+string
+-
+vector
+-
+

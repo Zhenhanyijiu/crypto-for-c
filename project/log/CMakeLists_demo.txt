@@ -1,0 +1,49 @@
+#todo
+#LIB_BPLUSTREE_SRC是当前目录下的源代码文件集合
+cmake_minimum_required(VERSION 3.6)
+#set(LIB_CHECK_SRC "../../src/check.cpp" "../../include/check.h" "../../include/log.h")
+set(LIB_CHECK_SRC "../../src/check.cpp")
+#set(PROJECT_BINARY_DIR .)
+#set(LIB_CHECK_NAME checktts)
+#set(STA _static)
+#这是最后库文件的输出目录，这里是bplustree /build/lib
+set(LIBRARY_OUTPUT_PATH ../../libs/linux)
+include_directories(../../include)
+add_compile_options(-fPIC)
+#添加编译选项的宏定义_BPLUS_TREE_DEBUG
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+add_definitions(-std=c++11)
+add_definitions(-DLINUX_X86_64)
+#生成一个名为bplustree的动态库，即libbplustree.so
+add_library(check SHARED ${LIB_CHECK_SRC})
+#构建一个新的target，cmake会删除其他同名的库
+#因此如果构建libbplustree.a，则会删除libbplustree.so
+# CLEAN_DIRECT_OUTPUT 1避免了出现这个问题
+set_target_properties(check PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+#构建动态库版本号和api版本号libbplustree.so1.0和libbplustree.so1
+set_target_properties(check PROPERTIES VERSION 1.0 SOVERSION 1)
+#把动态库安装到目录bplustree /build/lib
+install(TARGETS check LIBRARY DESTINATION ${LIBRARY_OUTPUT_PATH})
+#静态库和动态库的名字不能相同，静态库需要在末尾加上_static
+add_library(check_static STATIC ${LIB_CHECK_SRC})
+#让静态库输出以libbplustree.a显示而不是libbplustree_static.a
+set_target_properties(check_static PROPERTIES OUTPUT_NAME check)
+set_target_properties(check_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+#把静态库输出到bplustree /build/lib
+install(TARGETS check_static ARCHIVE DESTINATION ${LIBRARY_OUTPUT_PATH})
+#######
+#######
+set(EXE_CHECK_SRC "../../src/demo_test.cpp")
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+#SET(EXECUTABLE_OUTPUT_PATH ../../test/)
+#add_definitions(-DLINUX_X86_64)
+add_definitions(-std=c++11)
+link_directories(../../libs/linux)
+link_libraries("libcheck.a")
+include_directories(../../include)
+add_executable(Demo ${EXE_CHECK_SRC})
+#target_link_libraries(Demo libcheck.a)
+install(TARGETS Demo DESTINATION ../../test/)  
+#SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "../../test") 
+#add_executable(audio_tool ${SOURCE_FILES})

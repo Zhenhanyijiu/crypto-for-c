@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main_test.dir/mnt/hgfs/clionworkspace/crypto-for-cpp/src/main_test.cpp.o  -o main_test  -L/mnt/hgfs/clionworkspace/crypto-for-cpp/project/aes_test/../../libs -Wl,-rpath,/mnt/hgfs/clionworkspace/crypto-for-cpp/project/aes_test/../../libs -Wl,-Bstatic -llog -laes -Wl,-Bdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main_test.dir/mnt/hgfs/clionworkspace/crypto-for-cpp/src/main_test.cpp.o  -o main_test  -L/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64_test/../../libs -Wl,-rpath,/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64_test/../../libs -Wl,-Bstatic -llog -lbase64 -Wl,-Bdynamic 

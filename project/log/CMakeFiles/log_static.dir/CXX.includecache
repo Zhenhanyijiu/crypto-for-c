@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/log.h
+stdarg.h
+-
+stdio.h
+-
+
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/log.cpp
+log.h
+/mnt/hgfs/clionworkspace/crypto-for-cpp/src/log.h
+stdarg.h
+-
+stdio.h
+-
+string.h
+-
+string
+-
+

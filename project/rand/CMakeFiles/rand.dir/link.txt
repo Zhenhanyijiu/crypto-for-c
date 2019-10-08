@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,librand.so -o /mnt/hgfs/clionworkspace/crypto-for-cpp/libs/librand.so CMakeFiles/rand.dir/mnt/hgfs/clionworkspace/crypto-for-cpp/src/rand.cpp.o  -L/mnt/hgfs/clionworkspace/crypto-for-cpp/project/rand/../../libs -Wl,-rpath,/mnt/hgfs/clionworkspace/crypto-for-cpp/project/rand/../../libs: -Wl,-Bstatic -laes -Wl,-Bdynamic 

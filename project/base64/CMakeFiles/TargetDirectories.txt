@@ -1,0 +1,8 @@
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/install/strip.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/install.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/install/local.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/base64.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/edit_cache.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/base64_static.dir
+/mnt/hgfs/clionworkspace/crypto-for-cpp/project/base64/CMakeFiles/list_install_components.dir
