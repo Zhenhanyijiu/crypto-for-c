@@ -284,7 +284,7 @@ int base64_dec(char* dest, int* dest_size, const char* src, int src_size) {
         // if (i < times_4 - 1 || src_end != '=') {
         dest[k] = s0 << 2 | ((s1 >> 4) & 0x3);
         dest[k + 1] = ((s1 & 0xf) << 4) | ((s2 >> 2) & 0xf);
-        dest[k + 2] = ((s2 & 0x3) << 6) | ((s3 >> 2) & 0x3f);
+        dest[k + 2] = ((s2 & 0x3) << 6) | (s3 & 0x3f);
         //}
     }
     count = 3 * (times_4 - 1);
@@ -321,7 +321,7 @@ int base64_dec(char* dest, int* dest_size, const char* src, int src_size) {
     }
     // dest[count] = s0 << 2 | ((s1 >> 4) & 0x3);
     // dest[count + 1] = ((s1 & 0xf) << 4) | ((s2 >> 2) & 0xf);
-    dest[count + 2] = ((s2 & 0x3) << 6) | ((s3 >> 2) & 0x3f);
+    dest[count + 2] = ((s2 & 0x3) << 6) | (s3 & 0x3f);
     *dest_size = count + 3;
     return 0;
 }
